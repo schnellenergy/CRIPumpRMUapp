@@ -176,22 +176,12 @@ class MoreMenuItem {
                 icon: Icons.supervisor_account,
                 path: '/customers'),
             MoreMenuItem(
-                title: '${S.of(context).assets}',
-                icon: Icons.domain,
-                path: '/assets'),
-            MoreMenuItem(
                 title: '${S.of(context).auditLogs}',
                 icon: Icons.track_changes,
                 path: '/auditLogs')
           ]);
           break;
         case Authority.CUSTOMER_USER:
-          items.addAll([
-            MoreMenuItem(
-                title: '${S.of(context).assets}',
-                icon: Icons.domain,
-                path: '/assets')
-          ]);
           break;
         case Authority.REFRESH_TOKEN:
           break;

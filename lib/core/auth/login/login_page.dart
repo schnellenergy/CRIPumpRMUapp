@@ -70,14 +70,11 @@ class _LoginPageState extends TbPageState<LoginPage> {
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
                               Row(children: [
-                                SvgPicture.asset(
+                                Image.asset(
                                     ThingsboardImage.thingsBoardWithTitle,
-                                    height: 25,
-                                    color: Theme.of(context).primaryColor,
-                                    semanticsLabel:
-                                        '${S.of(context).logoDefaultValue}')
-                              ]),
-                              SizedBox(height: 32),
+                                    height: 60, alignment: Alignment.centerRight)
+                              ], mainAxisAlignment: MainAxisAlignment.center,),
+                              SizedBox(height: 48),
                               Row(children: [
                                 Text('${S.of(context).loginNotification}',
                                     style: TextStyle(
@@ -163,26 +160,6 @@ class _LoginPageState extends TbPageState<LoginPage> {
                                           })
                                     ],
                                   )),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  TextButton(
-                                    onPressed: () {
-                                      _forgotPassword();
-                                    },
-                                    child: Text(
-                                      '${S.of(context).passwordForgotText}',
-                                      style: TextStyle(
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .primary,
-                                          letterSpacing: 1,
-                                          fontSize: 12,
-                                          height: 16 / 12),
-                                    ),
-                                  )
-                                ],
-                              ),
                               Spacer(),
                               ElevatedButton(
                                 child: Text('${S.of(context).login}'),

@@ -45,10 +45,8 @@ class _HomePageState extends TbContextState<HomePage>
         elevation: dashboardState ? 0 : 8,
         title: Center(
             child: Container(
-                height: 24,
-                child: SvgPicture.asset(ThingsboardImage.thingsBoardWithTitle,
-                    color: Theme.of(context).primaryColor,
-                    semanticsLabel: 'ThingsBoard Logo'))),
+                height: 30,
+                child: Image.asset(ThingsboardImage.thingsBoardWithTitle))),
         actions: [
           if (tbClient.isSystemAdmin())
             IconButton(

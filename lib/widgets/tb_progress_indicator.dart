@@ -61,16 +61,11 @@ class _TbProgressIndicatorState extends State<TbProgressIndicator>
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SvgPicture.asset(ThingsboardImage.thingsboardCenter,
-            height: widget.size,
-            width: widget.size,
-            color: widget._getValueColor(context)),
         AnimatedBuilder(
           animation: _rotation,
-          child: SvgPicture.asset(ThingsboardImage.thingsboardOuter,
+          child: Image.asset(ThingsboardImage.thingsboardCenter,
               height: widget.size,
-              width: widget.size,
-              color: widget._getValueColor(context)),
+              width: widget.size),
           builder: (BuildContext context, Widget? child) {
             return Transform.rotate(
                 angle: _rotation.value * pi * 2, child: child);
